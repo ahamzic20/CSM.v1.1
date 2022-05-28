@@ -30,7 +30,7 @@ namespace CSM.v1._1.Repositories
             return source;
         }
 
-        public static List<Source> GetEquipmentTypes()
+        public static List<Source> GetSources()
         {
             List<Source> sources = new List<Source>();
 

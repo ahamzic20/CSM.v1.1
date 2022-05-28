@@ -101,7 +101,6 @@
             this.Name = "FrmCipEmployees";
             this.Text = "FrmCipEmployees";
             this.Load += new System.EventHandler(this.FrmCipEmployees_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.dgvCipEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foiEmployeesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();

@@ -27,10 +27,17 @@ namespace CSM.v1._1
 
         private void ShowEquipment()
         {
+
+         
+
+
             List<Equipment> equipments = EquipmentRepository.GetEquipments();
+           
             dgvEquipment.DataSource = equipments;
+           
 
             dgvEquipment.Columns["Id"].DisplayIndex = 0;
+            
 
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CSM.v1._1.Class;
+using CSM.v1._1.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,23 @@ namespace CSM.v1._1
             InitializeComponent();
         }
 
-     
+        private void FrmAddEquipment_Load(object sender, EventArgs e)
+        {
+
+            ShowEquipment();
+        }
+
+        private void ShowEquipment()
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            FrmEquipment frmequipment = new FrmEquipment();
+            Hide();
+            frmequipment.ShowDialog();
+            Close();
+        }
     }
 }
