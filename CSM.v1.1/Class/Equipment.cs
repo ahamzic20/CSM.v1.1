@@ -11,7 +11,7 @@ namespace CSM.v1._1.Class
         public int Id { get; set; }
         public DateTime DateTime { get; set; }
         public string ProjectName { get; set; }
-        public int EquipmentName { get; set; }
+        public string EquipmentName { get; set; }
         public string Description { get; set; }
         public int IdSupplier { get; set; }
         public int IdSource { get; set; }
