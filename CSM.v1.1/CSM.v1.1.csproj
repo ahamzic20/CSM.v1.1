@@ -85,6 +85,7 @@
     <Compile Include="Repositories\EquipmentRepository.cs" />
     <Compile Include="Repositories\EquipmentTypeRepository.cs" />
     <Compile Include="Repositories\FoiEmployeeRepository.cs" />
+    <Compile Include="Repositories\SourceRepository.cs" />
     <EmbeddedResource Include="FrmAddEquipment.resx">
       <DependentUpon>FrmAddEquipment.cs</DependentUpon>
     </EmbeddedResource>
