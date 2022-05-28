@@ -51,7 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\CipEmployee.cs" />
+    <Compile Include="Class\Equipment.cs" />
+    <Compile Include="Class\EquipmentType.cs" />
+    <Compile Include="Class\FoiEmployee.cs" />
     <Compile Include="Class\Person.cs" />
+    <Compile Include="Class\Source.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
