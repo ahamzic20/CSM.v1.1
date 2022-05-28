@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CSM.v1._1.Class;
+using CSM.v1._1.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +21,16 @@ namespace CSM.v1._1
 
         private void FrmEquipment_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet1.Equipment' table. You can move, or remove it, as needed.
-            this.equipmentTableAdapter.Fill(this.dataSet1.Equipment);
+
+            ShowEquipment();
+        }
+
+        private void ShowEquipment()
+        {
+            List<Equipment> equipments = EquipmentRepository.GetEquipments();
+            dgvEquipment.DataSource = equipments;
+
+            dgvEquipment.Columns["Id"].DisplayIndex = 0;
 
         }
 

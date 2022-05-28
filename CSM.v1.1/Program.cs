@@ -16,7 +16,7 @@ namespace CSM.v1._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCipEmployees());
+            Application.Run(new FrmEquipment());
         }
     }
 }
