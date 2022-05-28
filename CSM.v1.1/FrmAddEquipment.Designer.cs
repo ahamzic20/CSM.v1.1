@@ -36,16 +36,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cboFoiEmployee = new System.Windows.Forms.ComboBox();
+            this.cboSource = new System.Windows.Forms.ComboBox();
+            this.cboEquipmentType = new System.Windows.Forms.ComboBox();
+            this.cboCipEmployee = new System.Windows.Forms.ComboBox();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
+            this.txtEquipmentName = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.dtDateTime = new System.Windows.Forms.DateTimePicker();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nabavitelj
@@ -120,100 +120,100 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Primatelj:";
             // 
-            // comboBox1
+            // cboFoiEmployee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(303, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cboFoiEmployee.FormattingEnabled = true;
+            this.cboFoiEmployee.Location = new System.Drawing.Point(303, 29);
+            this.cboFoiEmployee.Name = "cboFoiEmployee";
+            this.cboFoiEmployee.Size = new System.Drawing.Size(242, 21);
+            this.cboFoiEmployee.TabIndex = 8;
             // 
-            // comboBox2
+            // cboSource
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(303, 82);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(242, 21);
-            this.comboBox2.TabIndex = 9;
+            this.cboSource.FormattingEnabled = true;
+            this.cboSource.Location = new System.Drawing.Point(303, 82);
+            this.cboSource.Name = "cboSource";
+            this.cboSource.Size = new System.Drawing.Size(242, 21);
+            this.cboSource.TabIndex = 9;
             // 
-            // comboBox3
+            // cboEquipmentType
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(303, 135);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 21);
-            this.comboBox3.TabIndex = 10;
+            this.cboEquipmentType.FormattingEnabled = true;
+            this.cboEquipmentType.Location = new System.Drawing.Point(303, 135);
+            this.cboEquipmentType.Name = "cboEquipmentType";
+            this.cboEquipmentType.Size = new System.Drawing.Size(242, 21);
+            this.cboEquipmentType.TabIndex = 10;
             // 
-            // comboBox4
+            // cboCipEmployee
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(303, 284);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(242, 21);
-            this.comboBox4.TabIndex = 11;
+            this.cboCipEmployee.FormattingEnabled = true;
+            this.cboCipEmployee.Location = new System.Drawing.Point(303, 284);
+            this.cboCipEmployee.Name = "cboCipEmployee";
+            this.cboCipEmployee.Size = new System.Drawing.Size(242, 21);
+            this.cboCipEmployee.TabIndex = 11;
             // 
-            // textBox1
+            // txtProjectName
             // 
-            this.textBox1.Location = new System.Drawing.Point(303, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtProjectName.Location = new System.Drawing.Point(303, 109);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(242, 20);
+            this.txtProjectName.TabIndex = 12;
             // 
-            // textBox3
+            // txtEquipmentName
             // 
-            this.textBox3.Location = new System.Drawing.Point(303, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 20);
-            this.textBox3.TabIndex = 14;
+            this.txtEquipmentName.Location = new System.Drawing.Point(303, 162);
+            this.txtEquipmentName.Name = "txtEquipmentName";
+            this.txtEquipmentName.Size = new System.Drawing.Size(242, 20);
+            this.txtEquipmentName.TabIndex = 14;
             // 
-            // richTextBox1
+            // txtDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(303, 188);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(246, 90);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.txtDescription.Location = new System.Drawing.Point(303, 188);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(242, 90);
+            this.txtDescription.TabIndex = 16;
+            this.txtDescription.Text = "";
             // 
-            // dateTimePicker1
+            // dtDateTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(303, 56);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dtDateTime.Location = new System.Drawing.Point(303, 56);
+            this.dtDateTime.Name = "dtDateTime";
+            this.dtDateTime.Size = new System.Drawing.Size(242, 20);
+            this.dtDateTime.TabIndex = 17;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(175, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 44);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Dodaj opremu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(175, 399);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(193, 44);
+            this.btnAdd.TabIndex = 18;
+            this.btnAdd.Text = "Dodaj opremu";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(565, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 44);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Odustani";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(565, 399);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(193, 44);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "Odustani";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // FrmAddEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 496);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dtDateTime);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtEquipmentName);
+            this.Controls.Add(this.txtProjectName);
+            this.Controls.Add(this.cboCipEmployee);
+            this.Controls.Add(this.cboEquipmentType);
+            this.Controls.Add(this.cboSource);
+            this.Controls.Add(this.cboFoiEmployee);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -239,15 +239,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cboFoiEmployee;
+        private System.Windows.Forms.ComboBox cboSource;
+        private System.Windows.Forms.ComboBox cboEquipmentType;
+        private System.Windows.Forms.ComboBox cboCipEmployee;
+        private System.Windows.Forms.TextBox txtProjectName;
+        private System.Windows.Forms.TextBox txtEquipmentName;
+        private System.Windows.Forms.RichTextBox txtDescription;
+        private System.Windows.Forms.DateTimePicker dtDateTime;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
