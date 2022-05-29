@@ -31,9 +31,12 @@ namespace CSM.v1._1
          
 
 
-            List<Equipment> equipments = EquipmentRepository.GetEquipments();
-           
-            dgvEquipment.DataSource = equipments;
+            List<EquipmentDataSource> equipmentdatasources = EquipmentDataSourceRepository.GetEquipmentDataSources();
+
+            //FoiEmployee employee = FoiEmployeeRepository.GetFoiEmployee();
+
+
+            dgvEquipment.DataSource = equipmentdatasources;
            
 
             dgvEquipment.Columns["Id"].DisplayIndex = 0;

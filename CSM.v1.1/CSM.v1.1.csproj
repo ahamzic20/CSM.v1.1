@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Class\CipEmployee.cs" />
     <Compile Include="Class\Equipment.cs" />
+    <Compile Include="Class\EquipmentDataSource.cs" />
     <Compile Include="Class\EquipmentType.cs" />
     <Compile Include="Class\FoiEmployee.cs" />
     <Compile Include="Class\Person.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CipEmployeeRepository.cs" />
+    <Compile Include="Repositories\EquipmentDataSourceRepository.cs" />
     <Compile Include="Repositories\EquipmentRepository.cs" />
     <Compile Include="Repositories\EquipmentTypeRepository.cs" />
     <Compile Include="Repositories\FoiEmployeeRepository.cs" />

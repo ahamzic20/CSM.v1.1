@@ -32,8 +32,8 @@ namespace CSM.v1._1.Repositories
         public static List<Equipment> GetEquipments()
         {
             List<Equipment> equipments = new List<Equipment>();
-
-
+            
+            
 
             string sql = "SELECT * FROM Equipment";
 
@@ -52,6 +52,8 @@ namespace CSM.v1._1.Repositories
 
             return equipments;
         }
+
+       
 
         private static Equipment CreateObject(SqlDataReader reader)
         {
@@ -83,6 +85,8 @@ namespace CSM.v1._1.Repositories
 
             return equipment;
         }
+
+ 
     }
 }
 

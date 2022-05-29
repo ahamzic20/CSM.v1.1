@@ -69,6 +69,7 @@
             this.dgvEquipment.Location = new System.Drawing.Point(12, 38);
             this.dgvEquipment.Name = "dgvEquipment";
             this.dgvEquipment.RowHeadersWidth = 51;
+            this.dgvEquipment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEquipment.Size = new System.Drawing.Size(1018, 258);
             this.dgvEquipment.TabIndex = 3;
             // 
