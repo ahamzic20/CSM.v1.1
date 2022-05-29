@@ -59,5 +59,14 @@ namespace CSM.v1._1
             frmaddequipment.ShowDialog();
             Close();
         }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            FrmAddEquipment frmaddequipment = new FrmAddEquipment();
+            Hide();
+            frmaddequipment.ShowDialog();
+            Close();
+
+        }
     }
 }

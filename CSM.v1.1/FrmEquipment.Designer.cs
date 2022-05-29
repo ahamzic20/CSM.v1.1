@@ -34,6 +34,8 @@
             this.equipmentTableAdapter = new CSM.v1._1.DataSet1TableAdapters.EquipmentTableAdapter();
             this.btnAddEquipment = new System.Windows.Forms.Button();
             this.dgvEquipment = new System.Windows.Forms.DataGridView();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
@@ -73,11 +75,32 @@
             this.dgvEquipment.Size = new System.Drawing.Size(1018, 258);
             this.dgvEquipment.TabIndex = 3;
             // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(358, 339);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(340, 48);
+            this.btnChange.TabIndex = 4;
+            this.btnChange.Text = "Promijeni opremu";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(704, 339);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(340, 48);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Izbriši opremu";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // FrmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 439);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.dgvEquipment);
             this.Controls.Add(this.btnAddEquipment);
             this.Name = "FrmEquipment";
@@ -96,5 +119,7 @@
         private DataSet1TableAdapters.EquipmentTableAdapter equipmentTableAdapter;
         private System.Windows.Forms.Button btnAddEquipment;
         private System.Windows.Forms.DataGridView dgvEquipment;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
