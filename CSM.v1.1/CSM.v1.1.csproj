@@ -67,11 +67,11 @@
     <Compile Include="FrmAddEquipment.Designer.cs">
       <DependentUpon>FrmAddEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCipEmployees.cs">
+    <Compile Include="FrmSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCipEmployees.Designer.cs">
-      <DependentUpon>FrmCipEmployees.cs</DependentUpon>
+    <Compile Include="FrmSource.Designer.cs">
+      <DependentUpon>FrmSource.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEquipment.cs">
       <SubType>Form</SubType>
@@ -89,8 +89,8 @@
     <EmbeddedResource Include="FrmAddEquipment.resx">
       <DependentUpon>FrmAddEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCipEmployees.resx">
-      <DependentUpon>FrmCipEmployees.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSource.resx">
+      <DependentUpon>FrmSource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEquipment.resx">
       <DependentUpon>FrmEquipment.cs</DependentUpon>

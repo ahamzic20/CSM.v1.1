@@ -1,6 +1,6 @@
 ﻿namespace CSM.v1._1
 {
-    partial class FrmCipEmployees
+    partial class FrmSource
     {
         /// <summary>
         /// Required designer variable.
@@ -100,7 +100,7 @@
             this.Controls.Add(this.dgvCipEmployees);
             this.Name = "FrmCipEmployees";
             this.Text = "FrmCipEmployees";
-            this.Load += new System.EventHandler(this.FrmCipEmployees_Load);
+            this.Load += new System.EventHandler(this.FrmSource_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCipEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foiEmployeesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
