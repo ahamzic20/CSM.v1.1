@@ -85,8 +85,18 @@ namespace CSM.v1._1.Repositories
 
             return equipment;
         }
+        public static void InsertEquipment(int foiemployee, int source, string projectname, string equipmentname, int equipmenttype, string description,
+              int  cipemployee)
+        {
+            string sql = $"INSERT INTO  Equipment (DateTime,ProjectName,EquipmentName,Description,IdSupplier,IdSource,IdType,IdEmployee) VALUES (GETDATE(),'{projectname}','{equipmentname}','{description}',{foiemployee},{source},{equipmenttype},{cipemployee})";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
 
- 
+
+
+
     }
 }
 

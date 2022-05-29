@@ -85,6 +85,7 @@
     <Compile Include="Repositories\CipEmployeeRepository.cs" />
     <Compile Include="Repositories\EquipmentDataSourceRepository.cs" />
     <Compile Include="Repositories\EquipmentRepository.cs" />
+    <Compile Include="Repositories\EquipmentSearchRepository.cs" />
     <Compile Include="Repositories\EquipmentTypeRepository.cs" />
     <Compile Include="Repositories\FoiEmployeeRepository.cs" />
     <Compile Include="Repositories\SourceRepository.cs" />

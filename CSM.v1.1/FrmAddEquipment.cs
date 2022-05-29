@@ -28,7 +28,11 @@ namespace CSM.v1._1
         private void ShowEquipment()
         {
 
+          
         }
+
+
+     
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -36,6 +40,27 @@ namespace CSM.v1._1
             Hide();
             frmequipment.ShowDialog();
             Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int foiemployee =(int) numFoiEmployee.Value;
+            int source = (int)numSource.Value;
+            var projectname = txtProjectName.Text;
+            int equipmenttype= (int)numEquipmenType.Value;
+            var equipmentname= txtEquipmentName.Text;
+            var discription = txtDescription.Text;
+            int cipemployee = (int)numCipEmployee.Value;
+            EquipmentRepository.InsertEquipment(foiemployee,source,projectname,equipmentname,equipmenttype,discription,
+                cipemployee);
+
+
+        }
+
+        private void cboFoiEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var FoiEmployee = cboFoiEmployee.SelectedItem as FoiEmployee;
+            
         }
     }
 }

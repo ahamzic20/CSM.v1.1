@@ -68,5 +68,29 @@ namespace CSM.v1._1
             Close();
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var Search = txtSearch.Text;
+            List<EquipmentDataSource> equipmentdatasources = EquipmentSearchRepository.GetEquipmentDataSources(Search);
+
+            //FoiEmployee employee = FoiEmployeeRepository.GetFoiEmployee();
+
+
+            dgvEquipment.DataSource = equipmentdatasources;
+
+
+            dgvEquipment.Columns["Id"].DisplayIndex = 0;
+            dgvEquipment.Columns["EquipmentName"].DisplayIndex = 1;
+            dgvEquipment.Columns["ProjectName"].DisplayIndex = 2;
+            dgvEquipment.Columns["Description"].DisplayIndex = 3;
+            dgvEquipment.Columns["EquipmentType"].DisplayIndex = 4;
+            dgvEquipment.Columns["SourceName"].DisplayIndex = 5;
+            dgvEquipment.Columns["DateTime"].DisplayIndex = 6;
+            dgvEquipment.Columns["SupplierName"].DisplayIndex = 7;
+            dgvEquipment.Columns["EmployeeName"].DisplayIndex = 8;
+
+
+        }
     }
 }

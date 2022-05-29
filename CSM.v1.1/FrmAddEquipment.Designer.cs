@@ -43,9 +43,17 @@
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.txtEquipmentName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
-            this.dtDateTime = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.numFoiEmployee = new System.Windows.Forms.NumericUpDown();
+            this.numSource = new System.Windows.Forms.NumericUpDown();
+            this.numEquipmenType = new System.Windows.Forms.NumericUpDown();
+            this.numCipEmployee = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numFoiEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEquipmenType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCipEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // Nabavitelj
@@ -127,6 +135,7 @@
             this.cboFoiEmployee.Name = "cboFoiEmployee";
             this.cboFoiEmployee.Size = new System.Drawing.Size(242, 21);
             this.cboFoiEmployee.TabIndex = 8;
+            this.cboFoiEmployee.SelectedIndexChanged += new System.EventHandler(this.cboFoiEmployee_SelectedIndexChanged);
             // 
             // cboSource
             // 
@@ -174,13 +183,6 @@
             this.txtDescription.TabIndex = 16;
             this.txtDescription.Text = "";
             // 
-            // dtDateTime
-            // 
-            this.dtDateTime.Location = new System.Drawing.Point(303, 56);
-            this.dtDateTime.Name = "dtDateTime";
-            this.dtDateTime.Size = new System.Drawing.Size(242, 20);
-            this.dtDateTime.TabIndex = 17;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(175, 399);
@@ -189,6 +191,7 @@
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Dodaj opremu";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -200,14 +203,53 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(303, 56);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(242, 20);
+            this.txtDate.TabIndex = 20;
+            // 
+            // numFoiEmployee
+            // 
+            this.numFoiEmployee.Location = new System.Drawing.Point(591, 34);
+            this.numFoiEmployee.Name = "numFoiEmployee";
+            this.numFoiEmployee.Size = new System.Drawing.Size(120, 20);
+            this.numFoiEmployee.TabIndex = 25;
+            // 
+            // numSource
+            // 
+            this.numSource.Location = new System.Drawing.Point(707, 82);
+            this.numSource.Name = "numSource";
+            this.numSource.Size = new System.Drawing.Size(120, 20);
+            this.numSource.TabIndex = 26;
+            // 
+            // numEquipmenType
+            // 
+            this.numEquipmenType.Location = new System.Drawing.Point(654, 136);
+            this.numEquipmenType.Name = "numEquipmenType";
+            this.numEquipmenType.Size = new System.Drawing.Size(120, 20);
+            this.numEquipmenType.TabIndex = 27;
+            // 
+            // numCipEmployee
+            // 
+            this.numCipEmployee.Location = new System.Drawing.Point(628, 290);
+            this.numCipEmployee.Name = "numCipEmployee";
+            this.numCipEmployee.Size = new System.Drawing.Size(120, 20);
+            this.numCipEmployee.TabIndex = 28;
+            // 
             // FrmAddEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 496);
+            this.Controls.Add(this.numCipEmployee);
+            this.Controls.Add(this.numEquipmenType);
+            this.Controls.Add(this.numSource);
+            this.Controls.Add(this.numFoiEmployee);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dtDateTime);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtEquipmentName);
             this.Controls.Add(this.txtProjectName);
@@ -225,6 +267,10 @@
             this.Controls.Add(this.Nabavitelj);
             this.Name = "FrmAddEquipment";
             this.Text = "FrmAddEquipment";
+            ((System.ComponentModel.ISupportInitialize)(this.numFoiEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEquipmenType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCipEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,8 +293,12 @@
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.TextBox txtEquipmentName;
         private System.Windows.Forms.RichTextBox txtDescription;
-        private System.Windows.Forms.DateTimePicker dtDateTime;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.NumericUpDown numFoiEmployee;
+        private System.Windows.Forms.NumericUpDown numSource;
+        private System.Windows.Forms.NumericUpDown numEquipmenType;
+        private System.Windows.Forms.NumericUpDown numCipEmployee;
     }
 }

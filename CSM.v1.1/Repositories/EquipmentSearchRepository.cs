@@ -2,6 +2,7 @@
 using DBLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,10 @@ using System.Threading.Tasks;
 
 namespace CSM.v1._1.Repositories
 {
-    public class EquipmentDataSourceRepository
+    public class EquipmentSearchRepository
     {
+
+           
 
         public static EquipmentDataSource GetEquipmentDataSource(int id)
         {
@@ -30,18 +33,19 @@ namespace CSM.v1._1.Repositories
             return equipmentdatasource;
         }
 
-        public static List<EquipmentDataSource> GetEquipmentDataSources()
+        public static List<EquipmentDataSource> GetEquipmentDataSources(string Search)
         {
-       
 
+            var search = Search;
             List<EquipmentDataSource> equipmentdatasources = new List<EquipmentDataSource>();
 
-
-            string sql = $"SELECT e.Id, e.DateTime, e.ProjectName, e.EquipmentName, e.Description,(c.FirstName + ' ' + c.LastName) AS SupplierName,s.Name AS SourceName,et.Name AS EquipmentType,(f.FirstName + ' ' + f.LastName) AS EmployeeName FROM Equipment e JOIN CipEmployees c ON e.IdSupplier = c.Id JOIN Source s ON e.IdSource = s.Id JOIN EquipmentType et ON e.IdType = et.Id JOIN FoiEmployees f ON e.IdEmployee = f.Id";
-
+            
+            string sql = $"SELECT e.Id, e.DateTime, e.ProjectName, e.EquipmentName, e.Description,(c.FirstName + ' ' + c.LastName) AS SupplierName,s.Name AS SourceName,et.Name AS EquipmentType,(f.FirstName + ' ' + f.LastName) AS EmployeeName FROM Equipment e JOIN CipEmployees c ON e.IdSupplier = c.Id JOIN Source s ON e.IdSource = s.Id JOIN EquipmentType et ON e.IdType = et.Id JOIN FoiEmployees f ON e.IdEmployee = f.Id WHERE ProjectName='{search}'";
+           
             DB.SetConfiguration("ahamzic20_DB", "ahamzic20", "pNzDysZy");
 
             DB.OpenConnection();
+            
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
             {
@@ -79,16 +83,13 @@ namespace CSM.v1._1.Repositories
                 EquipmentName = equipmentName,
                 SupplierName = suppliername,
                 SourceName = sourcename,
-                EquipmentType= equipmenttype,
-                EmployeeName= employeename
+                EquipmentType = equipmenttype,
+                EmployeeName = employeename
 
             };
 
             return equipmentdatasource;
         }
-
-
-
 
 
 
