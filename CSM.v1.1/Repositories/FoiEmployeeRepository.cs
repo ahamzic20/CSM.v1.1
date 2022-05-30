@@ -87,5 +87,24 @@ namespace CSM.v1._1.Repositories
             DB.CloseConnection();
             return id;
         }
+
+        public static int GetCurrentId(string Id)
+        {
+            int id = 0;
+
+            string sql = $"SELECT IdEmployee FROM Equipment WHERE  Id='{Id}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                reader.Read();
+                id = int.Parse(reader["IdEmployee"].ToString());
+                reader.Close();
+            }
+
+            DB.CloseConnection();
+            return id;
+        }
+
     }
 }

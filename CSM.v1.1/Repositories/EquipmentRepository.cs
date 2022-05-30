@@ -101,25 +101,15 @@ namespace CSM.v1._1.Repositories
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
-
-
-        public static int GetCurrentId(string Id)
+        public static void UpdateEquipment(int foiemployee, int source, string projectname, string equipmentname, int equipmenttype, string description,
+             int cipemployee)
         {
-            int id = 0;
-
-            string sql = $"SELECT * FROM Equipment WHERE  Id='{Id}'";
+            string sql = $"UPDATE  Equipment  SET DateTime =GETDATE(),ProjectName='{projectname}',EquipmentName='{equipmentname}', Description='{description}',IdSupplier={cipemployee},IdSource={source},IdType={equipmenttype},IdEmployee={foiemployee} WHERE Id={id}";
             DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            if (reader.HasRows)
-            {
-                reader.Read();
-                id = int.Parse(reader["IdSupplier"].ToString());
-                reader.Close();
-            }
-
+            DB.ExecuteCommand(sql);
             DB.CloseConnection();
-            return id;
         }
+
 
 
     }

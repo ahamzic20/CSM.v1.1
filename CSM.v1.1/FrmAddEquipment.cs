@@ -41,20 +41,28 @@ namespace CSM.v1._1
             else if(choose==1)
             {
 
+
+                int supplierid = FoiEmployeeRepository.GetCurrentId(selectedId);
                 var foiemployees = FoiEmployeeRepository.GetFoiEmployees();
                 cboSupplier.DataSource = foiemployees;
+                cboSupplier.SelectedIndex = supplierid-1;
 
-            //    int SelectedId=EquipmentRepository.GetCurrentId(selectedId);
-                
 
+                int sourceid = SourceRepository.GetCurrentId(selectedId);
                 var sources = SourceRepository.GetSources();
                 cboSource.DataSource = sources;
+                cboSource.SelectedIndex = sourceid - 1;
 
+
+                int employeeid = CipEmployeeRepository.GetCurrentId(selectedId);
                 var cipemployees = CipEmployeeRepository.GetCipEmployees();
                 cboEmployee.DataSource = cipemployees;
+                cboEmployee.SelectedIndex = employeeid - 1;
 
+                int eqiupmenttypeid = EquipmentTypeRepository.GetCurrentId(selectedId);
                 var eqiupmenttypes = EquipmentTypeRepository.GetEquipmentTypes();
                 cboEquipmentType.DataSource = eqiupmenttypes;
+                cboEquipmentType.SelectedIndex = eqiupmenttypeid-1;
 
             }
             txtDate.Text = DateTime.Now.ToString();
