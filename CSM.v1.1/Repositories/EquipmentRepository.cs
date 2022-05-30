@@ -94,6 +94,13 @@ namespace CSM.v1._1.Repositories
             DB.CloseConnection();
         }
 
+        public static void DeleteEquipment(string id)
+        {
+            string sql = $"DELETE FROM Equipment WHERE Id={id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
 
 
 

@@ -89,8 +89,16 @@ namespace CSM.v1._1
             dgvEquipment.Columns["DateTime"].DisplayIndex = 6;
             dgvEquipment.Columns["SupplierName"].DisplayIndex = 7;
             dgvEquipment.Columns["EmployeeName"].DisplayIndex = 8;
+            
 
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = dgvEquipment.CurrentRow.Cells["Id"].Value.ToString();
+            EquipmentRepository.DeleteEquipment(id);
+            ShowEquipment();
         }
     }
 }
