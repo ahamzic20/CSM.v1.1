@@ -21,15 +21,19 @@ namespace CSM.v1._1
 
         private void FrmAddEquipment_Load(object sender, EventArgs e)
         {
+            var foiemployees = FoiEmployeeRepository.GetFoiEmployees();
+            cboFoiEmployee.DataSource = foiemployees;
 
-            ShowEquipment();
+            var sources = SourceRepository.GetSources();
+            cboSource.DataSource = sources;
+
+            var cipemployees = CipEmployeeRepository.GetCipEmployees();
+            cboCipEmployee.DataSource = cipemployees;
+
+            var eqiupmenttypes = EquipmentTypeRepository.GetEquipmentTypes();
+            cboEquipmentType.DataSource = eqiupmenttypes;
         }
 
-        private void ShowEquipment()
-        {
-
-          
-        }
 
 
      
@@ -57,10 +61,6 @@ namespace CSM.v1._1
 
         }
 
-        private void cboFoiEmployee_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var FoiEmployee = cboFoiEmployee.SelectedItem as FoiEmployee;
-            
-        }
+       
     }
 }

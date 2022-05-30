@@ -10,5 +10,9 @@ namespace CSM.v1._1.Class
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
