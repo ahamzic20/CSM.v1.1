@@ -14,24 +14,51 @@ namespace CSM.v1._1
 {
     public partial class FrmAddEquipment : Form
     {
-        public FrmAddEquipment()
+        int choose;
+        string selectedId;
+        public FrmAddEquipment(int id, string Id)
         {
+            choose = id;
+            selectedId = Id;
             InitializeComponent();
         }
 
         private void FrmAddEquipment_Load(object sender, EventArgs e)
         {
+            if (choose == 0) { 
             var foiemployees = FoiEmployeeRepository.GetFoiEmployees();
-            cboFoiEmployee.DataSource = foiemployees;
+            cboSupplier.DataSource = foiemployees;
 
             var sources = SourceRepository.GetSources();
             cboSource.DataSource = sources;
 
             var cipemployees = CipEmployeeRepository.GetCipEmployees();
-            cboCipEmployee.DataSource = cipemployees;
+            cboEmployee.DataSource = cipemployees;
 
             var eqiupmenttypes = EquipmentTypeRepository.GetEquipmentTypes();
             cboEquipmentType.DataSource = eqiupmenttypes;
+            }
+            else if(choose==1)
+            {
+
+                var foiemployees = FoiEmployeeRepository.GetFoiEmployees();
+                cboSupplier.DataSource = foiemployees;
+
+            //    int SelectedId=EquipmentRepository.GetCurrentId(selectedId);
+                
+
+                var sources = SourceRepository.GetSources();
+                cboSource.DataSource = sources;
+
+                var cipemployees = CipEmployeeRepository.GetCipEmployees();
+                cboEmployee.DataSource = cipemployees;
+
+                var eqiupmenttypes = EquipmentTypeRepository.GetEquipmentTypes();
+                cboEquipmentType.DataSource = eqiupmenttypes;
+
+            }
+            txtDate.Text = DateTime.Now.ToString();
+            
         }
 
 
@@ -48,12 +75,14 @@ namespace CSM.v1._1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string foiemployeename = cboFoiEmployee.SelectedItem.ToString();
+            string foiemployeename = cboSupplier.SelectedItem.ToString();
+            //
             string sourcename = cboSource.SelectedItem.ToString();
             string equipmenttypename= cboEquipmentType.SelectedItem.ToString();
-            string cipemployeename = cboCipEmployee.SelectedItem.ToString();
+            string cipemployeename = cboEmployee.SelectedItem.ToString();
 
-            int foiemployee=FoiEmployeeRepository.GetFoiEmployeeId(foiemployeename);
+            int foiemployee = FoiEmployeeRepository.GetFoiEmployeeId(foiemployeename);
+            //
             int source = SourceRepository.GetSourceId(sourcename);
             var projectname = txtProjectName.Text;
 
@@ -66,6 +95,11 @@ namespace CSM.v1._1
 
             EquipmentRepository.InsertEquipment(foiemployee,source,projectname,equipmentname,equipmenttype,discription,
                 cipemployee);
+
+            FrmEquipment frmequipment = new FrmEquipment();
+            Hide();
+            frmequipment.ShowDialog();
+            Close();
 
 
         }

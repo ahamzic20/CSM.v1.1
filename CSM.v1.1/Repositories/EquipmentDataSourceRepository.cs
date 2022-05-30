@@ -37,7 +37,7 @@ namespace CSM.v1._1.Repositories
             List<EquipmentDataSource> equipmentdatasources = new List<EquipmentDataSource>();
 
 
-            string sql = $"SELECT e.Id, e.DateTime, e.ProjectName, e.EquipmentName, e.Description,(c.FirstName + ' ' + c.LastName) AS SupplierName,s.Name AS SourceName,et.Name AS EquipmentType,(f.FirstName + ' ' + f.LastName) AS EmployeeName FROM Equipment e JOIN CipEmployees c ON e.IdSupplier = c.Id JOIN Source s ON e.IdSource = s.Id JOIN EquipmentType et ON e.IdType = et.Id JOIN FoiEmployees f ON e.IdEmployee = f.Id";
+            string sql = $"SELECT e.Id, e.DateTime, e.ProjectName, e.EquipmentName, e.Description,(c.FirstName + ' ' + c.LastName) AS EmployeeName,s.Name AS SourceName,et.Name AS EquipmentType,(f.FirstName + ' ' + f.LastName) AS SupplierName FROM Equipment e JOIN CipEmployees c ON e.IdSupplier = c.Id JOIN Source s ON e.IdSource = s.Id JOIN EquipmentType et ON e.IdType = et.Id JOIN FoiEmployees f ON e.IdEmployee = f.Id";
 
             DB.SetConfiguration("ahamzic20_DB", "ahamzic20", "pNzDysZy");
 

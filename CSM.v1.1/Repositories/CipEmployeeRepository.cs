@@ -75,7 +75,7 @@ namespace CSM.v1._1.Repositories
         {
             int id = 0;
             var words = cipemployeename.Split(' ');
-            string sql = $"SELECT Id FROM CipEmployees WHERE  FirstName='{words[0]}' AND LastName='{words[1]}';";
+            string sql = $"SELECT Id FROM CipEmployees WHERE  FirstName=N'{words[0]}' AND LastName=N'{words[1]}';";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)

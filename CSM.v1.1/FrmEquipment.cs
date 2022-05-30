@@ -51,10 +51,13 @@ namespace CSM.v1._1
 
 
         }
-
+        int Choose;
+       
         private void btnAddEquipment_Click(object sender, EventArgs e)
         {
-            FrmAddEquipment frmaddequipment = new FrmAddEquipment();
+            Choose = 0;
+            string id = null;
+            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id);
             Hide();
             frmaddequipment.ShowDialog();
             Close();
@@ -62,7 +65,9 @@ namespace CSM.v1._1
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            FrmAddEquipment frmaddequipment = new FrmAddEquipment();
+            Choose = 1;
+            string id = dgvEquipment.CurrentRow.Cells["Id"].Value.ToString();
+            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id);
             Hide();
             frmaddequipment.ShowDialog();
             Close();

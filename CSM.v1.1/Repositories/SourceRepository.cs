@@ -74,7 +74,7 @@ namespace CSM.v1._1.Repositories
         {
             int id = 0;
          
-            string sql = $"SELECT Id FROM Source WHERE  Name='{sourcename}'";
+            string sql = $"SELECT Id FROM Source WHERE  Name=N'{sourcename}'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)

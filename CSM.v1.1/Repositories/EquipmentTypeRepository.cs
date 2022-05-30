@@ -74,7 +74,7 @@ namespace CSM.v1._1.Repositories
         {
             int id = 0;
 
-            string sql = $"SELECT Id FROM EquipmentType WHERE  Name='{equipmenttypename}'";
+            string sql = $"SELECT Id FROM EquipmentType WHERE  Name=N'{equipmenttypename}'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)

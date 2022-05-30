@@ -36,10 +36,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cboFoiEmployee = new System.Windows.Forms.ComboBox();
+            this.cboSupplier = new System.Windows.Forms.ComboBox();
             this.cboSource = new System.Windows.Forms.ComboBox();
             this.cboEquipmentType = new System.Windows.Forms.ComboBox();
-            this.cboCipEmployee = new System.Windows.Forms.ComboBox();
+            this.cboEmployee = new System.Windows.Forms.ComboBox();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.txtEquipmentName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
@@ -128,15 +128,15 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Primatelj:";
             // 
-            // cboFoiEmployee
+            // cboSupplier
             // 
-            this.cboFoiEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFoiEmployee.FormattingEnabled = true;
-            this.cboFoiEmployee.Location = new System.Drawing.Point(404, 36);
-            this.cboFoiEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.cboFoiEmployee.Name = "cboFoiEmployee";
-            this.cboFoiEmployee.Size = new System.Drawing.Size(321, 24);
-            this.cboFoiEmployee.TabIndex = 8;
+            this.cboSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSupplier.FormattingEnabled = true;
+            this.cboSupplier.Location = new System.Drawing.Point(404, 36);
+            this.cboSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSupplier.Name = "cboSupplier";
+            this.cboSupplier.Size = new System.Drawing.Size(321, 24);
+            this.cboSupplier.TabIndex = 8;
             // 
             // cboSource
             // 
@@ -158,15 +158,15 @@
             this.cboEquipmentType.Size = new System.Drawing.Size(321, 24);
             this.cboEquipmentType.TabIndex = 10;
             // 
-            // cboCipEmployee
+            // cboEmployee
             // 
-            this.cboCipEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCipEmployee.FormattingEnabled = true;
-            this.cboCipEmployee.Location = new System.Drawing.Point(404, 350);
-            this.cboCipEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.cboCipEmployee.Name = "cboCipEmployee";
-            this.cboCipEmployee.Size = new System.Drawing.Size(321, 24);
-            this.cboCipEmployee.TabIndex = 11;
+            this.cboEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEmployee.FormattingEnabled = true;
+            this.cboEmployee.Location = new System.Drawing.Point(404, 350);
+            this.cboEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.cboEmployee.Name = "cboEmployee";
+            this.cboEmployee.Size = new System.Drawing.Size(321, 24);
+            this.cboEmployee.TabIndex = 11;
             // 
             // txtProjectName
             // 
@@ -235,10 +235,10 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtEquipmentName);
             this.Controls.Add(this.txtProjectName);
-            this.Controls.Add(this.cboCipEmployee);
+            this.Controls.Add(this.cboEmployee);
             this.Controls.Add(this.cboEquipmentType);
             this.Controls.Add(this.cboSource);
-            this.Controls.Add(this.cboFoiEmployee);
+            this.Controls.Add(this.cboSupplier);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -266,10 +266,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cboFoiEmployee;
+        private System.Windows.Forms.ComboBox cboSupplier;
         private System.Windows.Forms.ComboBox cboSource;
         private System.Windows.Forms.ComboBox cboEquipmentType;
-        private System.Windows.Forms.ComboBox cboCipEmployee;
+        private System.Windows.Forms.ComboBox cboEmployee;
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.TextBox txtEquipmentName;
         private System.Windows.Forms.RichTextBox txtDescription;
