@@ -16,10 +16,16 @@ namespace CSM.v1._1
     {
         int choose;
         string selectedId;
-        public FrmAddEquipment(int id, string Id)
+        string Projectname;
+        string Equipmentname;
+        string Description;
+        public FrmAddEquipment(int id, string Id, string projectname, string equipmentname,  string description)
         {
             choose = id;
             selectedId = Id;
+            Projectname = projectname;
+            Equipmentname = equipmentname;
+            Description = description;
             InitializeComponent();
         }
 
@@ -47,7 +53,7 @@ namespace CSM.v1._1
                 cboSupplier.DataSource = foiemployees;
                 cboSupplier.SelectedIndex = supplierid-1;
 
-
+                
                 int sourceid = SourceRepository.GetCurrentId(selectedId);
                 var sources = SourceRepository.GetSources();
                 cboSource.DataSource = sources;
@@ -64,6 +70,12 @@ namespace CSM.v1._1
                 cboEquipmentType.DataSource = eqiupmenttypes;
                 cboEquipmentType.SelectedIndex = eqiupmenttypeid-1;
 
+                txtDescription.Text = Projectname;
+                txtEquipmentName.Text = Equipmentname;
+                txtProjectName.Text = Projectname;
+
+                
+                
             }
             txtDate.Text = DateTime.Now.ToString();
             
@@ -99,11 +111,18 @@ namespace CSM.v1._1
 
             var equipmentname= txtEquipmentName.Text;
             var discription = txtDescription.Text;
-            int cipemployee = CipEmployeeRepository.GetCipEmployeeId(cipemployeename); 
+            int cipemployee = CipEmployeeRepository.GetCipEmployeeId(cipemployeename);
 
+            if (choose == 0) { 
             EquipmentRepository.InsertEquipment(foiemployee,source,projectname,equipmentname,equipmenttype,discription,
                 cipemployee);
+            }
+            else if (choose == 1)
+            {
+                EquipmentRepository.UpdateEquipment(foiemployee, source, projectname, equipmentname, equipmenttype, discription,
+                cipemployee, selectedId );
 
+            }
             FrmEquipment frmequipment = new FrmEquipment();
             Hide();
             frmequipment.ShowDialog();

@@ -57,7 +57,10 @@ namespace CSM.v1._1
         {
             Choose = 0;
             string id = null;
-            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id);
+            string projectname = null; ;
+            string equipmentname = null; ;
+            string description = null;
+            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id,projectname,equipmentname,description);
             Hide();
             frmaddequipment.ShowDialog();
             Close();
@@ -67,7 +70,10 @@ namespace CSM.v1._1
         {
             Choose = 1;
             string id = dgvEquipment.CurrentRow.Cells["Id"].Value.ToString();
-            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id);
+            string projectname = dgvEquipment.CurrentRow.Cells["ProjectName"].Value.ToString();
+            string equipmentname = dgvEquipment.CurrentRow.Cells["EquipmentName"].Value.ToString();
+            string description = dgvEquipment.CurrentRow.Cells["Description"].Value.ToString();
+            FrmAddEquipment frmaddequipment = new FrmAddEquipment(Choose,id,projectname,equipmentname,description);
             Hide();
             frmaddequipment.ShowDialog();
             Close();

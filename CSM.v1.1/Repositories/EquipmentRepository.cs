@@ -102,7 +102,7 @@ namespace CSM.v1._1.Repositories
             DB.CloseConnection();
         }
         public static void UpdateEquipment(int foiemployee, int source, string projectname, string equipmentname, int equipmenttype, string description,
-             int cipemployee)
+             int cipemployee, string id)
         {
             string sql = $"UPDATE  Equipment  SET DateTime =GETDATE(),ProjectName='{projectname}',EquipmentName='{equipmentname}', Description='{description}',IdSupplier={cipemployee},IdSource={source},IdType={equipmenttype},IdEmployee={foiemployee} WHERE Id={id}";
             DB.OpenConnection();
