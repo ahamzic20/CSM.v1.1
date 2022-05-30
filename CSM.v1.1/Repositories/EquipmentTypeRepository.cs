@@ -68,5 +68,24 @@ namespace CSM.v1._1.Repositories
 
             return equipmentType;
         }
+
+
+        public static int GetEquipmentTypeId(string equipmenttypename)
+        {
+            int id = 0;
+
+            string sql = $"SELECT Id FROM EquipmentType WHERE  Name='{equipmenttypename}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                reader.Read();
+                id = int.Parse(reader["Id"].ToString());
+                reader.Close();
+            }
+
+            DB.CloseConnection();
+            return id;
+        }
     }
 }

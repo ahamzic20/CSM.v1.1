@@ -48,13 +48,22 @@ namespace CSM.v1._1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int foiemployee =(int) numFoiEmployee.Value;
-            int source = (int)numSource.Value;
+            string foiemployeename = cboFoiEmployee.SelectedItem.ToString();
+            string sourcename = cboSource.SelectedItem.ToString();
+            string equipmenttypename= cboEquipmentType.SelectedItem.ToString();
+            string cipemployeename = cboCipEmployee.SelectedItem.ToString();
+
+            int foiemployee=FoiEmployeeRepository.GetFoiEmployeeId(foiemployeename);
+            int source = SourceRepository.GetSourceId(sourcename);
             var projectname = txtProjectName.Text;
-            int equipmenttype= (int)numEquipmenType.Value;
+
+            int equipmenttype = EquipmentTypeRepository.GetEquipmentTypeId(equipmenttypename);
+
+
             var equipmentname= txtEquipmentName.Text;
             var discription = txtDescription.Text;
-            int cipemployee = (int)numCipEmployee.Value;
+            int cipemployee = CipEmployeeRepository.GetCipEmployeeId(cipemployeename); 
+
             EquipmentRepository.InsertEquipment(foiemployee,source,projectname,equipmentname,equipmenttype,discription,
                 cipemployee);
 

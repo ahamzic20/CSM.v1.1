@@ -46,14 +46,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtDate = new System.Windows.Forms.TextBox();
-            this.numFoiEmployee = new System.Windows.Forms.NumericUpDown();
-            this.numSource = new System.Windows.Forms.NumericUpDown();
-            this.numEquipmenType = new System.Windows.Forms.NumericUpDown();
-            this.numCipEmployee = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numFoiEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEquipmenType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCipEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // Nabavitelj
@@ -228,50 +220,15 @@
             this.txtDate.Location = new System.Drawing.Point(404, 69);
             this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
             this.txtDate.Size = new System.Drawing.Size(321, 22);
             this.txtDate.TabIndex = 20;
-            // 
-            // numFoiEmployee
-            // 
-            this.numFoiEmployee.Location = new System.Drawing.Point(788, 42);
-            this.numFoiEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.numFoiEmployee.Name = "numFoiEmployee";
-            this.numFoiEmployee.Size = new System.Drawing.Size(160, 22);
-            this.numFoiEmployee.TabIndex = 25;
-            // 
-            // numSource
-            // 
-            this.numSource.Location = new System.Drawing.Point(943, 101);
-            this.numSource.Margin = new System.Windows.Forms.Padding(4);
-            this.numSource.Name = "numSource";
-            this.numSource.Size = new System.Drawing.Size(160, 22);
-            this.numSource.TabIndex = 26;
-            // 
-            // numEquipmenType
-            // 
-            this.numEquipmenType.Location = new System.Drawing.Point(872, 167);
-            this.numEquipmenType.Margin = new System.Windows.Forms.Padding(4);
-            this.numEquipmenType.Name = "numEquipmenType";
-            this.numEquipmenType.Size = new System.Drawing.Size(160, 22);
-            this.numEquipmenType.TabIndex = 27;
-            // 
-            // numCipEmployee
-            // 
-            this.numCipEmployee.Location = new System.Drawing.Point(837, 357);
-            this.numCipEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.numCipEmployee.Name = "numCipEmployee";
-            this.numCipEmployee.Size = new System.Drawing.Size(160, 22);
-            this.numCipEmployee.TabIndex = 28;
             // 
             // FrmAddEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 610);
-            this.Controls.Add(this.numCipEmployee);
-            this.Controls.Add(this.numEquipmenType);
-            this.Controls.Add(this.numSource);
-            this.Controls.Add(this.numFoiEmployee);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
@@ -294,10 +251,6 @@
             this.Name = "FrmAddEquipment";
             this.Text = "FrmAddEquipment";
             this.Load += new System.EventHandler(this.FrmAddEquipment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numFoiEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEquipmenType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCipEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,9 +276,5 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtDate;
-        private System.Windows.Forms.NumericUpDown numFoiEmployee;
-        private System.Windows.Forms.NumericUpDown numSource;
-        private System.Windows.Forms.NumericUpDown numEquipmenType;
-        private System.Windows.Forms.NumericUpDown numCipEmployee;
     }
 }

@@ -70,5 +70,23 @@ namespace CSM.v1._1.Repositories
 
             return cipemployee;
         }
+
+        public static int GetCipEmployeeId(string cipemployeename)
+        {
+            int id = 0;
+            var words = cipemployeename.Split(' ');
+            string sql = $"SELECT Id FROM CipEmployees WHERE  FirstName='{words[0]}' AND LastName='{words[1]}';";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                reader.Read();
+                id = int.Parse(reader["Id"].ToString());
+                reader.Close();
+            }
+
+            DB.CloseConnection();
+            return id;
+        }
     }
 }

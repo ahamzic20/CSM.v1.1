@@ -70,5 +70,24 @@ namespace CSM.v1._1.Repositories
             return source;
         }
 
+        public static int GetSourceId(string sourcename)
+        {
+            int id = 0;
+         
+            string sql = $"SELECT Id FROM Source WHERE  Name='{sourcename}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                reader.Read();
+                id = int.Parse(reader["Id"].ToString());
+                reader.Close();
+            }
+
+            DB.CloseConnection();
+            return id;
+        }
+
+
     }
 }

@@ -70,5 +70,22 @@ namespace CSM.v1._1.Repositories
 
             return foiemployee;
         }
+        public static int GetFoiEmployeeId(string foiemployeename)
+        {
+            int id = 0;
+            var words = foiemployeename.Split(' ');
+            string sql = $"SELECT Id FROM FoiEmployees WHERE  FirstName='{words[0]}' AND LastName='{words[1]}';";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                reader.Read();
+                id = int.Parse(reader["Id"].ToString());
+                reader.Close();
+            }
+
+            DB.CloseConnection();
+            return id;
+        }
     }
 }
