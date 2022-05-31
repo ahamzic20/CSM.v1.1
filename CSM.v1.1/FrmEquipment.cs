@@ -109,10 +109,7 @@ namespace CSM.v1._1
         {
             string id = dgvEquipment.CurrentRow.Cells["Id"].Value.ToString();
             EquipmentRepository.DeleteEquipment(id);
-            MessageBox.Show("Uspješno ste obrisali opremu ID: : " + id, "Brisanje",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             ShowEquipment();
-            
         }
     }
 }
