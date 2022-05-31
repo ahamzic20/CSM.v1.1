@@ -70,7 +70,7 @@ namespace CSM.v1._1
                 cboEquipmentType.DataSource = eqiupmenttypes;
                 cboEquipmentType.SelectedIndex = eqiupmenttypeid-1;
 
-                txtDescription.Text = Projectname;
+                txtDescription.Text = Description;
                 txtEquipmentName.Text = Equipmentname;
                 txtProjectName.Text = Projectname;
 
@@ -113,21 +113,41 @@ namespace CSM.v1._1
             var discription = txtDescription.Text;
             int cipemployee = CipEmployeeRepository.GetCipEmployeeId(cipemployeename);
 
-            if (choose == 0) { 
-            EquipmentRepository.InsertEquipment(foiemployee,source,projectname,equipmentname,equipmenttype,discription,
-                cipemployee);
+            if (choose == 0) {
+               
+                if (string.IsNullOrEmpty(equipmentname) || string.IsNullOrEmpty(projectname) || string.IsNullOrEmpty(Description))
+                {
+                    
+                    MessageBox.Show("Nisu uneseni svi podaci!", "Problem", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                }
+                else
+                {
+                    EquipmentRepository.InsertEquipment(foiemployee, source, projectname, equipmentname, equipmenttype, discription,
+                        cipemployee);
+
+                    FrmEquipment frmequipment = new FrmEquipment();
+                    Hide();
+                    frmequipment.ShowDialog();
+                    Close();
+
+
+                }
             }
             else if (choose == 1)
             {
-                EquipmentRepository.UpdateEquipment(foiemployee, source, projectname, equipmentname, equipmenttype, discription,
+              
+                    EquipmentRepository.UpdateEquipment(foiemployee, source, projectname, equipmentname, equipmenttype, discription,
                 cipemployee, selectedId );
+                    FrmEquipment frmequipment = new FrmEquipment();
+                    Hide();
+                    frmequipment.ShowDialog();
+                    Close();
+               
 
             }
-            FrmEquipment frmequipment = new FrmEquipment();
-            Hide();
-            frmequipment.ShowDialog();
-            Close();
-
+           
+            
 
         }
 
